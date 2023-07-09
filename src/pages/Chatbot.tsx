@@ -2,9 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import "./ChatBot.css";
 
 const { Configuration, OpenAIApi } = require("openai");
+const apiKey =
+  "c2stRGw1RzZrQ0xQOVJWMGg3UXd6TThUM0JsYmtGSk5yeTB0SnJTaWg2eFFqZDJrZEpo";
 
+  const key=window.atob(apiKey)
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: key,
 });
 const openai = new OpenAIApi(configuration);
 
@@ -24,6 +27,7 @@ const ChatBot: React.FC = () => {
   const [isBotTyping, setIsBotTyping] = useState(false);
 
   const messageContainerRef = useRef<HTMLDivElement>(null);
+
 
   useEffect(() => {
     if (messageContainerRef.current) {
