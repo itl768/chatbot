@@ -4,7 +4,7 @@ import "./ChatBot.css";
 const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
 });
 const openai = new OpenAIApi(configuration);
 
@@ -17,7 +17,7 @@ const ChatBot: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "bot",
-      content: `Hi how can i hel you today `},
+      content: `Hi how can i help you today`},
 
   ]);
   const [input, setInput] = useState("");
